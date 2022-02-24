@@ -1,7 +1,10 @@
-import exemplePaths from './example';
+import { OpenAPIV3 } from 'openapi-types';
+import userSchema from './user';
+import piuSchema from './piu';
 
-const paths = {
-  ...exemplePaths,
+const patternSchema: OpenAPIV3.PathsObject = {
+  ...userSchema,
+  ...piuSchema,
 };
 
-export default paths;
+export default patternSchema;

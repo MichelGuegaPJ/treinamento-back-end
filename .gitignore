@@ -7,9 +7,9 @@ package-lock.json
 # vscode
 .idea/
 .vscode/
-.env
+# .env
 
 dist/
 
 # orm
-ormconfig.json
+# ormconfig.json

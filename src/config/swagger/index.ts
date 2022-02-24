@@ -1,21 +1,19 @@
 import { OpenAPIV3 } from 'openapi-types';
+import patternSchema from './paths';
 
-import paths from './paths';
-import schemas from './schemas';
-
-const swagger: OpenAPIV3.Document = {
+const swaggerDocument: OpenAPIV3.Document = {
   openapi: '3.0.0',
   info: {
     title: 'API do projeto XPTO',
     description: 'Documentação',
     contact: {
-      email: 'email@polijunior.com.br',
+      email: 'michel.guega@polijunior.com.br',
     },
     version: '1.0.0',
   },
   servers: [
     {
-      url: 'http://localhost:3333/',
+      url: 'http://localhost:3030/',
       description: 'Local server',
     },
     {
@@ -23,9 +21,8 @@ const swagger: OpenAPIV3.Document = {
       description: 'Deployed server',
     },
   ],
-  paths,
+  paths: patternSchema,
   components: {
-    schemas,
     securitySchemes: {
       bearerAuth: {
         type: 'http',
@@ -36,4 +33,4 @@ const swagger: OpenAPIV3.Document = {
   },
 };
 
-export default swagger;
+export default swaggerDocument;
